@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import { FiSearch, FiCheckCircle, FiTrendingUp } from "react-icons/fi";
+import QuizCategoriesSection from "@/components/Home/QuizCategories";
+import LeaderBoardSection from "@/components/Home/LeaderBoardSection";
 
 export default function Home() {
   return (
@@ -33,7 +36,7 @@ export default function Home() {
         </header>
 
         <main>
-          <section className="bg-gray-100 py-12">
+          <section className="bg-gray-100 py-12 h-[70vh] flex justify-center items-center">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -70,17 +73,19 @@ export default function Home() {
                   className="bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg shadow-lg p-6"
                 >
                   <svg
-                    className="w-48 h-48 text-white mx-auto"
+                    className="w-48 h-64 text-white mx-auto"
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
+                    viewBox="0 0 1000 1000"
                     fill="currentColor"
                   >
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-15c-3.31 0-6 2.69-6 6 0 .92.21 1.79.57 2.57l1.43-1.43c-.22-.45-.36-.95-.36-1.57 0-2.21 1.79-4 4-4 .61 0 1.17.14 1.69.37l1.43-1.43C13.79 3.21 12.92 3 12 3zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                    <path d="M 500 0C 224 0 0 224 0 500C 0 776 224 1000 500 1000C 776 1000 1000 776 1000 500C 1000 224 776 0 500 0C 500 0 500 0 500 0M 501 191C 626 191 690 275 690 375C 690 475 639 483 595 513C 573 525 558 553 559 575C 559 591 554 602 541 601C 541 601 460 601 460 601C 446 601 436 581 436 570C 436 503 441 488 476 454C 512 421 566 408 567 373C 566 344 549 308 495 306C 463 303 445 314 411 361C 400 373 384 382 372 373C 372 373 318 333 318 333C 309 323 303 307 312 293C 362 218 401 191 501 191C 501 191 501 191 501 191M 500 625C 541 625 575 659 575 700C 576 742 540 776 500 775C 457 775 426 739 425 700C 425 659 459 625 500 625C 500 625 500 625 500 625" />
                   </svg>
 
                   <h3 className="text-2xl font-bold mb-4 text-white text-center">
                     SnapTrivia
                   </h3>
+
+                  {/* https://friconix.com/icon/fi-cnsuxl-question-mark/ */}
                   <p className="text-xl text-white text-center">
                     Put your knowledge to the test!
                   </p>
@@ -89,129 +94,61 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="bg-white py-12">
+          <section className="py-32">
             <div className="container mx-auto px-4">
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-4xl font-bold mb-8 text-center"
-              >
-                How It Works
-              </motion.h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="flex flex-col items-center"
+              <div className="text-center">
+                <h2 className="text-4xl font-bold mb-4">About SnapTrivia</h2>
+                <p className="text-xl text-gray-700 mb-6">
+                  Discover a world of fascinating trivia and put your knowledge
+                  to the test with SnapTrivia's engaging quizzes.
+                </p>
+                <a
+                  href="/about"
+                  className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-colors duration-300"
                 >
-                  <img
-                    className="w-24 h-24 mb-4"
-                    src="/icon1.svg"
-                    alt="Icon 1"
-                  />
-                  <motion.h3
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="text-xl font-bold mb-2"
-                  >
-                    Choose a Category
-                  </motion.h3>
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="text-lg text-center"
-                  >
-                    Select from a wide range of categories that suit your
-                    interests and preferences.
-                  </motion.p>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  className="flex flex-col items-center"
-                >
-                  <img
-                    className="w-24 h-24 mb-4"
-                    src="/icon2.svg"
-                    alt="Icon 2"
-                  />
-                  <motion.h3
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
-                    className="text-xl font-bold mb-2"
-                  >
-                    Answer Questions
-                  </motion.h3>
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.7 }}
-                    className="text-lg text-center"
-                  >
-                    Answer a series of thought-provoking questions within a
-                    limited time frame.
-                  </motion.p>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="flex flex-col items-center"
-                >
-                  <img
-                    className="w-24 h-24 mb-4"
-                    src="/icon3.svg"
-                    alt="Icon 3"
-                  />
-                  <motion.h3
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="text-xl font-bold mb-2"
-                  >
-                    Check Your Score
-                  </motion.h3>
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                    className="text-lg text-center"
-                  >
-                    Get instant feedback on your performance and see how you
-                    stack up against others.
-                  </motion.p>
-                </motion.div>
+                  Learn More
+                </a>
               </div>
             </div>
           </section>
-          <section className="bg-blue-500 py-12">
-            <div className="container mx-auto px-4">
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-4xl font-bold mb-8 text-white text-center"
-              >
-                Join SnapTrivia Today
-              </motion.h2>
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="flex justify-center"
-              >
-                <button className="bg-white hover:bg-gray-100 text-blue-500 font-bold py-3 px-6 rounded-full">
-                  Get Started
-                </button>
-              </motion.div>
+
+          <section className="bg-gray-100 py-32">
+            <div className="container mx-auto px-4 max-w-6xl text-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div className="flex flex-col items-center">
+                  <FiSearch className="text-blue-500 text-4xl mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Find a Quiz</h3>
+                  <p className="text-gray-600">
+                    Explore a wide range of quiz categories and choose the
+                    topics that interest you.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <FiCheckCircle className="text-blue-500 text-4xl mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Answer Questions</h3>
+                  <p className="text-gray-600">
+                    Test your knowledge by answering a series of fun and
+                    challenging questions.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <FiTrendingUp className="text-blue-500 text-4xl mb-4" />
+                  <h3 className="text-xl font-bold mb-2">
+                    Track Your Progress
+                  </h3>
+                  <p className="text-gray-600">
+                    Monitor your performance, see your scores, and track your
+                    progress over time.
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
+
+          {/* <QuizCategoriesSection /> */}
+
+          <LeaderBoardSection />
+
           <section className="bg-gray-200 py-12">
             <div className="container mx-auto px-4">
               <motion.h2
@@ -273,6 +210,23 @@ export default function Home() {
                     - Jane Smith
                   </motion.p>
                 </motion.div>
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-gray-100 py-12">
+            <div className="container mx-auto px-4">
+              <div className="text-center">
+                <h2 className="text-4xl font-bold mb-4">
+                  Get Started with SnapTrivia
+                </h2>
+                <p className="text-xl mb-8">
+                  Join thousands of users and start challenging your knowledge
+                  today.
+                </p>
+                <button className="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg shadow-md">
+                  Sign Up Now
+                </button>
               </div>
             </div>
           </section>
