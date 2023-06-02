@@ -13,7 +13,7 @@ export default function Home() {
         </Head>
 
         <main>
-          <section className="bg-gray-100 md:py-12 h-[70vh] flex justify-center items-center">
+          <section className="bg-gray-100 py-20 md:py-12 h-[70vh] flex justify-center items-center">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -21,7 +21,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-4xl font-bold mb-4 pt-16"
+                    className="text-4xl font-bold mb-4 pt-20"
                   >
                     Challenge Your Knowledge
                   </motion.h2>
