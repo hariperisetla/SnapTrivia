@@ -2,7 +2,6 @@ import Image from "next/image";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { FiSearch, FiCheckCircle, FiTrendingUp } from "react-icons/fi";
-import QuizCategoriesSection from "@/components/home/QuizCategoriesSection";
 import LeaderBoardSection from "@/components/home/LeaderBoardSection";
 import { Header } from "@/components/layouts/main";
 
