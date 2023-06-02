@@ -3,6 +3,7 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import { FiSearch, FiCheckCircle, FiTrendingUp } from "react-icons/fi";
 import LeaderBoardSection from "@/components/Home/LeaderBoardSection";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,15 +14,15 @@ export default function Home() {
         </Head>
 
         <main>
-          <section className="bg-gray-100 py-20 md:py-12 h-[70vh] flex justify-center items-center">
+          <section className="bg-gray-100 md:py-12 md:h-[70vh] flex justify-center items-center">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
+                <div className="mt-10">
                   <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-4xl font-bold mb-4 pt-20"
+                    className="text-4xl font-bold mb-4"
                   >
                     Challenge Your Knowledge
                   </motion.h2>
@@ -41,7 +42,7 @@ export default function Home() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full"
                   >
-                    Start Quiz
+                    <Link href={"/quiz"}>Start Quiz</Link>
                   </motion.button>
                 </div>
                 <motion.div
