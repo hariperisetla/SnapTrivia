@@ -2,8 +2,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { FiSearch, FiCheckCircle, FiTrendingUp } from "react-icons/fi";
-import LeaderBoardSection from "@/components/home/LeaderBoardSection";
-import { Header } from "@/components/layouts/main";
+import LeaderBoardSection from "@/components/Home/LeaderBoardSection";
 
 export default function Home() {
   return (
