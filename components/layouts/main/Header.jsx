@@ -28,7 +28,7 @@ const Header = () => {
         <nav
           className={`${
             nav ? "flex flex-col space-y-5 text-left text-xl pt-5" : "hidden"
-          }  md:flex md:space-x-4 md:items-center`}
+          }  md:flex md:flex-row md:space-y-0 md:text-left md:text-xl md:pt-0 md:space-x-4 md:items-center`}
         >
           <Link
             onClick={handleNav}
