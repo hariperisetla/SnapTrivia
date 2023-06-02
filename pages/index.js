@@ -55,7 +55,8 @@ export default function Home() {
                     className="text-xl mb-4"
                   >
                     Discover a world of fascinating trivia and put your
-                    knowledge to the test with SnapTrivia's engaging quizzes.
+                    knowledge to the test with SnapTrivia&apos;s engaging
+                    quizzes.
                   </motion.p>
                   <motion.button
                     initial={{ opacity: 0, y: 20 }}
@@ -100,7 +101,7 @@ export default function Home() {
                 <h2 className="text-4xl font-bold mb-4">About SnapTrivia</h2>
                 <p className="text-xl text-gray-700 mb-6">
                   Discover a world of fascinating trivia and put your knowledge
-                  to the test with SnapTrivia's engaging quizzes.
+                  to the test with SnapTrivia&apos;s engaging quizzes.
                 </p>
                 <a
                   href="/about"
@@ -172,9 +173,9 @@ export default function Home() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-lg mb-4"
                   >
-                    "SnapTrivia is the best quiz app I've ever used. The
-                    questions are diverse and challenging, and the interface is
-                    user-friendly. Highly recommended!"
+                    &quot;SnapTrivia is the best quiz app I&apos;ve ever used.
+                    The questions are diverse and challenging, and the interface
+                    is user-friendly. Highly recommended!&quot;
                   </motion.p>
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -197,9 +198,9 @@ export default function Home() {
                     transition={{ duration: 0.8, delay: 0.5 }}
                     className="text-lg mb-4"
                   >
-                    "As a trivia enthusiast, SnapTrivia has become my go-to app
-                    for quick quizzes. The competitive multiplayer feature adds
-                    an extra level of excitement!"
+                    &quot;As a trivia enthusiast, SnapTrivia has become my go-to
+                    app for quick quizzes. The competitive multiplayer feature
+                    adds an extra level of excitement!&quot;
                   </motion.p>
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}
