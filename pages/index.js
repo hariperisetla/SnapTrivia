@@ -2,8 +2,9 @@ import Image from "next/image";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { FiSearch, FiCheckCircle, FiTrendingUp } from "react-icons/fi";
-import QuizCategoriesSection from "@/components/Home/QuizCategories";
-import LeaderBoardSection from "@/components/Home/LeaderBoardSection";
+import QuizCategoriesSection from "@/components/home/QuizCategoriesSection";
+import LeaderBoardSection from "@/components/home/LeaderBoardSection";
+import { Header } from "@/components/layouts/main";
 
 export default function Home() {
   return (
@@ -12,28 +13,6 @@ export default function Home() {
         <Head>
           <title>SnapTrivia - Home</title>
         </Head>
-        <header className="bg-gradient-to-r from-blue-500 to-indigo-500 py-6">
-          <div className="container mx-auto flex items-center justify-between px-4">
-            <h1 className="text-white font-bold text-4xl">SnapTrivia</h1>
-            <nav className="flex items-center space-x-4">
-              <a href="#" className="text-white hover:text-gray-200">
-                Home
-              </a>
-              <a href="#" className="text-white hover:text-gray-200">
-                Categories
-              </a>
-              <a href="#" className="text-white hover:text-gray-200">
-                About
-              </a>
-              <a href="#" className="text-white hover:text-gray-200">
-                Contact
-              </a>
-              <button className="bg-white text-blue-500 hover:bg-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
-                Log In
-              </button>
-            </nav>
-          </div>
-        </header>
 
         <main>
           <section className="bg-gray-100 py-12 h-[70vh] flex justify-center items-center">
